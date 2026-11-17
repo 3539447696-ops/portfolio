@@ -1329,7 +1329,22 @@ button:is(:hover,:focus-visible)>.physical-cutout,.detail-hero>.physical-cutout{
 }
 #nature-folder .nature-features li + li { margin-top: .45em; }
 #nature-folder .nature-intro .nature-credit { font-size: 12px; }
-</style></head>
+</style><style id="portrait-sway">
+@media (prefers-reduced-motion: no-preference) {
+  #platform .door.opening #train-profile .profile-portrait {
+    transform-origin:50% 12%;
+    animation:portrait-sway 1.55s ease-in-out both;
+  }
+}
+@keyframes portrait-sway {
+  0%,100% {transform:rotate(-2deg)}
+  20% {transform:rotate(7deg)}
+  42% {transform:rotate(-7deg)}
+  62% {transform:rotate(3.5deg)}
+  80% {transform:rotate(-4deg)}
+}
+</style>
+</head>
 <body>
 <div class="frame">
 <header><span class="brand">TRANSIT ARCHIVE</span><div class="head-right"><span id="step">00 / PLATFORM</span></div></header>
